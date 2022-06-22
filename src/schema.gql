@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type WeatherInfo {
+  id: Float!
+  main: String!
+  description: String!
+  icon: String!
+}
+
+type Daily {
+  dt: Float!
+  weather: [WeatherInfo!]!
+}
+
+type Weather {
+  daily: [Daily!]!
+  lat: String!
+  lon: String!
+}
+
+type Query {
+  getWeather(lat: String!, lon: String!, date: Float): Weather!
+}
